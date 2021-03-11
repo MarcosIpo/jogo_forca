@@ -1,0 +1,8 @@
+onibus
+carro
+moto
+caminhao
+carreta
+aviao
+barco
+bicicleta
