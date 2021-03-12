@@ -8,15 +8,25 @@ jogo = JogoForca.new
 
 
 
-while (jogo.completo == false ) and (jogo.nvidas > 0)
+until (jogo.completo == true ) or (jogo.nvidas == 0)
+  puts
+  puts "Você tem " + jogo.nvidas.to_s + " vidas"
+  puts
+  puts 'A Palavra tem ' + jogo.arrmostra.length.to_s + ' letras'
+  puts
+  print jogo.arrmostra
+  puts
+  puts
   puts 'Digite uma Letra!'
   letra = gets.chomp.upcase
   jogo.compara(letra)
   puts
-  print jogo.arrmostra
-  puts
-  puts jogo.nvidas
-  puts 
-  puts jogo.completo
-  puts
+  system "clear"
+end
+
+if jogo.completo == true
+  jogo.venceu
+else
+ jogo.perdeu
+
 end
